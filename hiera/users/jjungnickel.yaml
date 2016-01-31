@@ -1,0 +1,10 @@
+"nodejs::nodenv::ensure": "v1.0.0"
+"nodejs::build::ensure": "ddf49a386c9229d3c25fc75357e3668d14691305"
+"nodejs::nodenv::plugins":
+  "nodenv-vars":
+    "ensure": "ee42cd9db3f3fca2a77862ae05a410947c33ba09"
+    "source": "OiNutter/nodenv-vars"
+  "node-build-update-defs":
+    "ensure": "f09ca6606206c3201c0b89ead49aecd3c235cbea"
+    "source": "nodenv/node-build-update-defs"
+
