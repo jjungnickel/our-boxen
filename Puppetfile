@@ -61,6 +61,7 @@ github "zsh",         "1.0.0"
 github "osx",         "2.8.0"
 github "dotfiles",    "1.0.0", :repo => "jamieconnolly/puppet-dotfiles"
 github "fonts",       "0.0.4", :repo => "jjungnickel/puppet-fonts"
+github "iterm2",      "1.2.5", :repo => "jjungnickel/puppet-iterm2"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

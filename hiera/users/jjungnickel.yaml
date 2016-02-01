@@ -11,4 +11,7 @@
 dotfiles::symlinks:
   - emacs.d
   - spacemacs
+  - antigen
+  - zshrc
+  - zprofile
 

@@ -109,6 +109,11 @@ GITHUBTARBALL
     fonts (0.0.4)
 
 GITHUBTARBALL
+  remote: jjungnickel/puppet-iterm2
+  specs:
+    iterm2 (1.2.5)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.4.1)
@@ -136,6 +141,7 @@ DEPENDENCIES
   homebrew (= 2.0.2)
   hub (= 1.4.1)
   inifile (= 1.4.1)
+  iterm2 (= 1.2.5)
   module_data (= 0.0.4)
   nginx (= 1.6.0)
   nodejs (= 5.0.5)
