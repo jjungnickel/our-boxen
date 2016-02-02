@@ -9,5 +9,7 @@ class people::jjungnickel {
   package { 'emacs-mac':
     ensure => present,
     install_options => [ '--with-spacemacs-icon' ]
- }
+  }
+  package { '1password': provider => brewcask }
+  package { 'dropbox': provider => brewcask }
 }
