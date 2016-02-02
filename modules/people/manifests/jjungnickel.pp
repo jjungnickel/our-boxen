@@ -12,4 +12,5 @@ class people::jjungnickel {
   }
   package { '1password': provider => brewcask }
   package { 'dropbox': provider => brewcask }
+  package { 'mackup': provider => homebrew }
 }
