@@ -62,6 +62,9 @@ github "osx",         "2.8.0"
 github "dotfiles",    "1.0.0", :repo => "jamieconnolly/puppet-dotfiles"
 github "fonts",       "0.0.4", :repo => "jjungnickel/puppet-fonts"
 github "iterm2",      "1.2.5", :repo => "jjungnickel/puppet-iterm2"
+github "seil",        "1.0.4"
+github "karabiner",   "1.0.8"
+github "modern_space_cadet", "1.0.7"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
