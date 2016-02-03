@@ -8,6 +8,9 @@
     "ensure": "f09ca6606206c3201c0b89ead49aecd3c235cbea"
     "source": "nodenv/node-build-update-defs"
 
+# don't force me to switch shifts when typing acronyms
+# modern_space_cadet::force_correct_shifts: false
+
 dotfiles::symlinks:
   - emacs.d
   - spacemacs

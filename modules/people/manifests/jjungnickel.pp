@@ -57,4 +57,5 @@ class people::jjungnickel {
   package { 'dropbox': provider => brewcask }
   package { 'bartender': provider => brewcask }
   package { 'spectacle': provider => brewcask }
+  package { 'istat-menus': provider => brewcask }
 }
