@@ -23,7 +23,6 @@ class people::jjungnickel {
   include osx::finder::show_all_filename_extensions
 
   # Keyboard
-  # TODO Maybe disable 'force-correct-shifts' -- How?
   include modern_space_cadet
   include osx::keyboard::capslock_to_control
   class { 'osx::global::key_repeat_delay':
@@ -58,4 +57,6 @@ class people::jjungnickel {
   package { 'bartender': provider => brewcask }
   package { 'spectacle': provider => brewcask }
   package { 'istat-menus': provider => brewcask }
+  package { 'spotify': provider => brewcask }
+  package { 'viscosity': provider => brewcask }
 }
