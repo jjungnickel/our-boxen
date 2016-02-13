@@ -19,3 +19,8 @@ ruby::version::alias:
 
 # See https://github.com/boxen/puppet-java for docs
 java::update_version: 51
+
+# The default machine type. Allows to manage more than one machine to be configured
+# for a single user. The type is intended to distinguish between work/home/etc. and
+# should be overridden in `hiera/machines/%{macaddress}.yaml`
+machine::type: default

@@ -13,6 +13,7 @@
   :datadir: "%{::boxen_home}/repo/hiera"
 :hierarchy:
   - "users/%{github_login}"
+  - "machines/%{macaddress}"
   - common
 
 # Many modules make their own hiera data available through the use of

@@ -92,4 +92,17 @@ class people::jjungnickel {
   ### Mail
   package { 'quotefix': provider => brewcask }
 
+  ### FUSE
+  package { 'osxfuse': provider => brewcask }
+  ~> homebrew::tap { 'homebrew/fuse': }
+  ~> package { 'ext4fuse': }
+
+  ### "Stuff"
+  package { 'steam':
+    provider => brewcask,
+    ensure => hiera("machine::type") ? {
+      "home" => present,
+      default => absent
+    }
+  }
 }
