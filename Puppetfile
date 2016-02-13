@@ -1,3 +1,4 @@
+# -*- Puppet -*-
 # This file manages Puppet module dependencies.
 #
 # It works a lot like Bundler. We provide some core modules by
@@ -65,6 +66,8 @@ github "iterm2",      "1.2.5", :repo => "jjungnickel/puppet-iterm2"
 github "seil",        "1.0.4"
 github "karabiner",   "1.0.8"
 github "modern_space_cadet", "1.0.7"
+github "docker",      "1.0.0"
+
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

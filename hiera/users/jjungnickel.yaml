@@ -8,6 +8,11 @@
     "ensure": "f09ca6606206c3201c0b89ead49aecd3c235cbea"
     "source": "nodenv/node-build-update-defs"
 
+docker::engine::version: "1.10.0"
+docker::machine::version: "0.6.0"
+docker::compose::version: "1.6.0"
+docker::swarm::version: "1.1.0"
+
 # don't force me to switch shifts when typing acronyms
 # modern_space_cadet::force_correct_shifts: false
 

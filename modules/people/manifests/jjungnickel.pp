@@ -40,23 +40,56 @@ class people::jjungnickel {
   ### Shell/Terminal/Basics
   include zsh
   include dotfiles
-  include fonts::adobe::sourcecodepro
+  package { 'mackup': provider => homebrew }
+  # Fonts
+  homebrew::tap { 'caskroom/fonts': } ~> package { 'font-fira-code': provider => brewcask }
+  # This is a quick workaround to disable bold/light/medium faces globally, since there's no easy
+  # way to convince some apps to *not* use bold faces
+  exec { 'kill-non-regular-faces':
+    command => "osascript -e '
+    set disable_typefaces to {\"Light\", \"Bold\", \"Medium\"}
+    tell application \"Font Book\"
+	  set faces to typefaces whose family name is \"Fira Code\"
+	  repeat with f in faces
+	  if family name of f is \"Fira Code\" and disable_typefaces contains style name of f then set enabled of f to false
+	  end repeat
+    end tell
+    '"}
+
+  # Terminal
   include iterm2::stable
   include iterm2::colors::tomorrow_night_eighties
 
+  # Emacs
   homebrew::tap { 'railwaycat/homebrew-emacsmacport': }
   package { 'emacs-mac':
     ensure => present,
     install_options => [ '--with-spacemacs-icon' ]
   }
-  package { 'mackup': provider => homebrew }
 
   ### Desktop Apps
-  package { '1password': provider => brewcask }
-  package { 'dropbox': provider => brewcask }
-  package { 'bartender': provider => brewcask }
-  package { 'spectacle': provider => brewcask }
-  package { 'istat-menus': provider => brewcask }
-  package { 'spotify': provider => brewcask }
-  package { 'viscosity': provider => brewcask }
+  package { [
+    '1password',
+    'dropbox',
+    'bartender',
+    'spectacle',
+    'istat-menus',
+    'spotify',
+    'viscosity',
+    'vlc',
+    'telegram'
+  ]: provider => brewcask }
+
+  ### Development
+  # Docker
+  package { 'virtualbox': provider => brewcask }
+  include docker
+
+  # Java
+  package { 'java': provider => brewcask }
+  package { 'intellij-idea': provider => brewcask }
+
+  ### Mail
+  package { 'quotefix': provider => brewcask }
+
 }
