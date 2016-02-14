@@ -14,7 +14,7 @@ docker::compose::version: "1.6.0"
 docker::swarm::version: "1.1.0"
 
 # don't force me to switch shifts when typing acronyms
-# modern_space_cadet::force_correct_shifts: false
+modern_space_cadet::force_correct_shifts: false
 
 dotfiles::symlinks:
   - emacs.d
@@ -25,3 +25,25 @@ dotfiles::symlinks:
   - mackup
   - mackup.cfg
 
+boxen::personal::homebrew_packages:
+  - pstree
+  - htop
+  - mackup
+  - ag
+
+boxen::personal::osx_apps:
+  - 1password
+  - dropbox
+  - bartender
+  - spectacle
+  - istat-menus
+  - spotify
+  - viscosity
+  - vlc
+  - telegram
+  - google-chrome
+  - virtualbox
+  - java
+  - intellij-idea
+  - quotefix
+  - osxfuse

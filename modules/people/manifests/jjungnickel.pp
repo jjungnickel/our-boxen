@@ -40,7 +40,7 @@ class people::jjungnickel {
   ### Shell/Terminal/Basics
   include zsh
   include dotfiles
-  package { 'mackup': provider => homebrew }
+
   # Fonts
   homebrew::tap { 'caskroom/fonts': } ~> package { 'font-fira-code': provider => brewcask }
   # This is a quick workaround to disable bold/light/medium faces globally, since there's no easy
@@ -67,35 +67,12 @@ class people::jjungnickel {
     install_options => [ '--with-spacemacs-icon' ]
   }
 
-  ### Desktop Apps
-  package { [
-    '1password',
-    'dropbox',
-    'bartender',
-    'spectacle',
-    'istat-menus',
-    'spotify',
-    'viscosity',
-    'vlc',
-    'telegram'
-  ]: provider => brewcask }
-
   ### Development
   # Docker
-  package { 'virtualbox': provider => brewcask }
   include docker
 
-  # Java
-  package { 'java': provider => brewcask }
-  package { 'intellij-idea': provider => brewcask }
-
-  ### Mail
-  package { 'quotefix': provider => brewcask }
-
   ### FUSE
-  package { 'osxfuse': provider => brewcask }
-  ~> homebrew::tap { 'homebrew/fuse': }
-  ~> package { 'ext4fuse': }
+  homebrew::tap { 'homebrew/fuse': }
 
   ### "Stuff"
   package { 'steam':
