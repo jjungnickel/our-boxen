@@ -75,7 +75,7 @@ class people::jjungnickel {
   homebrew::tap { 'homebrew/fuse': }
 
   ### "Stuff"
-  package { 'steam':
+  package { [ 'steam', 'logitech-gaming-software' ]:
     provider => brewcask,
     ensure => hiera("machine::type") ? {
       "home" => present,

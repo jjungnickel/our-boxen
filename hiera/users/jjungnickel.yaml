@@ -32,6 +32,7 @@ boxen::personal::homebrew_packages:
   - ag
 
 boxen::personal::osx_apps:
+  - iterm2
   - 1password
   - dropbox
   - bartender
@@ -47,3 +48,4 @@ boxen::personal::osx_apps:
   - intellij-idea
   - quotefix
   - osxfuse
+  - flux
